@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        function pageRedirect() {
+      window.location.href = "base2.html";
+      const name = document.getElementById('name').value;
+      const designation = document.getElementById('designation').value;
+      const work = document.getElementById('work').value;
+
+      localStorage.setItem("NAME", name);
+      localStorage.setItem("Designation", designation);
+      localStorage.setItem("Work", work);
+
+     
+      return;
+      
+            
+    document.location.href = url;
+
+    }      
+    </script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="heading">
+            <h1>Assignment</h1>
+        </div>
+        <form action="base2.html" method="get">
+            <div>
+                <label for="name">NAME:</label>
+                <br>
+                <select name="myname" id="name" required>
+                    <option value="Na" selected>Select</option>
+                    <option value="Person 1">Person 1</option>
+                    <option value="Person 2">Person 2</option>
+                    <option value="Person 3">Person 3</option>
+                    <option value="Person 4">Person 4</option>
+                    <option value="Person 5">Person 5</option>
+                    <option value="Person 6">Person 6</option>
+                    <option value="Person 7">Person 7</option>
+                    <option value="Person 8">Person 8</option>
+                    <option value="Person 9">Person 9</option>
+                    <option value="Person 10">Person 10</option>
+                    <option value="Person 11">Person 11</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="designation">DESIGNATION:</label>
+                <br>
+                <select name="mydesignation" id="designation">
+                    <option value="Na" selected>Select</option>
+                    <option value="Officer">Officer</option>
+                    <option value="Employee">Employee</option>
+                    <option value="Senior Partner">Senior Partners</option>
+                    <option value="Others">Others</option>
+                    
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="work">WORK:</label>
+                <br>
+                <select name="mywork" id="work">
+                    <option value="Na" selected>Select</option>
+                    <option value="Submission 1">Submission 1</option>
+                    <option value="Submission 2">Submission 2</option>
+                </select>
+            </div>
+            <br>
+            <div><br>
+
+                <input type="submit" value="Submit" onclick="pageRedirect()"></input>
+
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
